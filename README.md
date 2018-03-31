@@ -3,7 +3,7 @@
 Java tutorial是oracle官方提供的java入门教程,包含数百个实例教程
 
 * [英文地址](https://docs.oracle.com/javase/tutorial/index.html)
-* [阅读](https://www.gitbook.com/read/book/icngor/javase_tutorial_zh)
+* [阅读](https://icngor.gitbooks.io/javase_tutorial_zh/)
 
 > 这份教程是以Java8为基础编写
 
