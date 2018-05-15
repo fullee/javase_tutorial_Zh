@@ -3,7 +3,7 @@
 * [README](README.md)
 
 ## 基础教程 
-* 入门
+* 入门(Getting_Started.md)
 	* Java技术介绍
 	* 编写"hello world"程序
 	* "hello world"详解
