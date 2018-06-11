@@ -39,7 +39,7 @@ public 和 static 的顺序没有限制 (public static or static public)，但�
 关于参数你可以使用任意的名字，但是一些程序员习惯上使用`args`或者`argv`.
 main方法类似于C和C++中的main函数，它是应用程序的入口。然后再由它调用其它方法。
 main只接受一个字符串数组作为参数。
-这个字符串数组时程序运行时传递数据的一种机制，如下：
+这个字符串数组是程序运行时传递数据的一种机制，如下：
 ```
 java MyApp arg1 arg2
 ```
@@ -51,7 +51,13 @@ System.out.println("Hello World!");
 ```
 使用核心库提供的`System`向标准输出设备输出“Hello World!”信息，核心库的其它部分将再后面的章节中介绍。
 
+HW程序忽略了命令行参数，但是你应当意识到参数是存在的。
 
+最后一行：
+```
+System.out.println("Hello World!");
+```
+使用核心库中System类打印"Hello World!"到标准输出，关于这个核心库（API）将会贯穿这个教程的始终。
 
 
 

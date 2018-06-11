@@ -3,11 +3,11 @@
 * [README](README.md)
 
 ## 基础教程 
-* 入门(Getting_Started.md)
-	* Java技术介绍
-	* 编写"hello world"程序
-	* "hello world"详解
-	* 问题
+* [入门](Getting_Started.md)
+	* [Java技术介绍](Getting_Started/The_Java_Technology_Phenomenon.md)
+	* [编写"hello world"程序](Getting_Started/The_HW_Application.md)
+	* ["hello world"详解](Getting_Started/A_Closer_Look_atHW.md)
+	* [常见问题解答](Getting_Started/Common_Problems.md)
 * 学习Java语言
 	* 面向对象编程概念
 	* 基础语法
