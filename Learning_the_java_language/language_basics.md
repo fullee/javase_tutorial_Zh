@@ -107,6 +107,7 @@ char和String可以包含任意的Unicode（UTF-16）字符。如果你的编辑
 ### 数组
 
 array是一种容器，用于保存单一类型且固定个数的对象。数组的长度在创建是已经被确定。这一节会更加详细的讨论数组。
+
 ![](../images/2_1.jpg)
 
 数组中每一项叫做一个元素（element），每个元素可以通过它的索引号访问。如上图所示，索引从0开始，第9个元素的索引是8.
@@ -325,9 +326,99 @@ There is no single correct answer here. Your results will vary depending on your
 In the program you created in Exercise 1, try leaving the fields uninitialized and print out their values. Try the same with a local variable and see what kind of compiler errors you can produce. Becoming familiar with common compiler errors will make it easier to recognize bugs in your code.
 Again, there is no single correct answer for this exercise. Your results will vary depending on your code.
 
-## 操作符
-这一节描述JPL的操作符。首先给出给常用的操作符，然后是不常用的操作符。每个讨论都包含了可以被编译和运行的源代码。
-## 表达式，段，块
+## 运算符
+这一节介绍JPL的运算符。首先给出给常用的运算符，然后是不常用的运算符。每个讨论都包含了可以被编译和运行的源代码。
+
+现在你已经学习了如何声明和初始化变量。你可能会想用它们来做些什么，学习JPL中的操作符将是一个很好的开始。运算符是在一个、两个或三个操作数上执行特定操作的特殊符号，然后返回结果。
+As we explore the operators of the Java programming language, it may be helpful for you to know ahead of time which operators have the highest precedence. The operators in the following table are listed according to precedence order. The closer to the top of the table an operator appears, the higher its precedence. Operators with higher precedence are evaluated before operators with relatively lower precedence. Operators on the same line have equal precedence. When operators of equal precedence appear in the same expression, a rule must govern which is evaluated first. All binary operators except for the assignment operators are evaluated from left to right; assignment operators are evaluated right to left.
+
+Operators	| Precedence
+----|----
+postfix	| expr++ expr--
+unary	| ++expr --expr +expr -expr ~ !
+multiplicative|	* / %
+additive	|+ -
+shift	|<< >> >>>
+relational|	< > <= >= instanceof
+equality	|== !=
+bitwise AND|	&
+bitwise exclusive OR	|^
+bitwise inclusive OR|	`|`
+logical AND	|&&
+logical OR	|`||`
+ternary	|? :
+assignment	|= += -= *= /= %= &= ^= |= <<= >>= >>>=
+
+In general-purpose programming, certain operators tend to appear more frequently than others; for example, the assignment operator "=" is far more common than the unsigned right shift operator ">>>". With that in mind, the following discussion focuses first on the operators that you're most likely to use on a regular basis, and ends focusing on those that are less common. Each discussion is accompanied by sample code that you can compile and run. Studying its output will help reinforce what you've just learned.
+
+### 赋值、算数、一元运算
+#### 一个简单的赋值运算
+最常用的运算符就是简单的赋值运算符即“=”，等号的右边是值，左边是操作数。
+```java
+ int cadence = 0;
+ int speed = 0;
+ int gear = 1;
+```
+#### 算数操作符
+JPL中提供的算数操作包括：加减乘除。于数学中的运算是一致的。对你来说新的唯一符号是“%”，它将一个操作数除以另一个操作数，并将余数作为结果返回。
+
+Operator	| Description
+----|----
++	| Additive operator (also used for String concatenation)
+-	| Subtraction operator
+*	| Multiplication operator
+/	| Division operator
+%	| Remainder operator
+
+ArithmeticDemo类测试算数操作符：
+```java
+class ArithmeticDemo {
+
+    public static void main (String[] args) {
+
+        int result = 1 + 2;
+        // result is now 3
+        System.out.println("1 + 2 = " + result);
+        int original_result = result;
+
+        result = result - 1;
+        // result is now 2
+        System.out.println(original_result + " - 1 = " + result);
+        original_result = result;
+
+        result = result * 2;
+        // result is now 4
+        System.out.println(original_result + " * 2 = " + result);
+        original_result = result;
+
+        result = result / 2;
+        // result is now 2
+        System.out.println(original_result + " / 2 = " + result);
+        original_result = result;
+
+        result = result + 8;
+        // result is now 10
+        System.out.println(original_result + " + 8 = " + result);
+        original_result = result;
+
+        result = result % 7;
+        // result is now 3
+        System.out.println(original_result + " % 7 = " + result);
+    }
+}
+```
+输出：
+```java
+1 + 2 = 3
+3 - 1 = 2
+2 * 2 = 4
+4 / 2 = 2
+2 + 8 = 10
+10 % 7 = 3
+```
+
+
+## 表达式，语句，块
 运算符可以被用于构建表达式,计算值。表达式是组成语句的核心组件。语句可以组成代码块。本节使用前面的代码介绍表达式，语句，代码块。
-## 控制流段
+## 控制流语句
 本节介绍JPL中的控制流程语句。包含判断循环分支语句，它可以是你的程序有条件的执行。
