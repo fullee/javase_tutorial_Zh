@@ -8,13 +8,16 @@ Java tutorial是oracle官方提供的java入门教程,包含数百个实例教�
 * QQ群：549684522
 
 > 这份教程是以Java8为基础编写
+
 ## 翻译缩写
-```
-JPL java programming language
-HW hello world
 
 ```
+JPL java programming language
+HW  hello world
+```
+
 ## 基础路径
+
 * 入门—— 介绍如何安装以及部署Java的课程，并且创建一个简单的程序。
 * 学习Java语言—— 课程描述了JPL基本的概念和特性。
 * 核心Java类—— 介绍Exceptions,bio,concurrency(并发),正则表达式以及运行环境。
@@ -23,10 +26,12 @@ HW hello world
 * 部署——如何打包应用为Jar
 
 ## 创建图形程序
+
 * Swing创建GUI
 * JavaFX创建GUI
 
 ## 高级课程
+
 * Custom Networking 介绍Java平台强大的网络特性。
 * 扩展机制
 * 全屏独占模式API

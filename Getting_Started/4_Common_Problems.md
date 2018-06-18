@@ -25,7 +25,7 @@ Class names, 'HelloWorldApp', are only accepted if annotation processing is expl
 
 如果你得到这样一个错误，在编译程序时你可能忘记了添加`.java`后缀。一定要记住，编译的命令是`javac HelloWorldApp.java`,而不是`javac HelloWorldApp`。
 
-### 在类Unix系统的中错误提示
+### 在UNIX系统的中错误提示
 
 ```
 javac: Command not found
@@ -46,11 +46,11 @@ Class names, 'HelloWorldApp', are only accepted if annotation processing is expl
 
 同windows系统一样，在使用`javac`命令编译程序时一定要添加`.java`的文件名后缀。
 
-
 ### 语法错误（针对所有的平台）
 
 If you mistype part of a program, the compiler may issue a syntax error. The message usually displays the type of the error, the line number where the error was detected, the code on that line, and the position of the error within the code. Here's an error caused by omitting a semicolon (;) at the end of a statement:
 
+```java
 testing.java:14: `;' expected.
 System.out.println("Input has " + count + " chars.")
                                                      ^
@@ -69,6 +69,8 @@ testing.java:14: Invalid declaration.
     System.out.println("Input has " + count + " chars.");
                       ^
 2 errors
+```
+
 The compiler issues two error messages because after it processes count++, the compiler's state indicates that it's in the middle of an expression. Without the semicolon, the compiler has no way of knowing that the statement is complete.
 
 If you see any compiler errors, then your program did not successfully compile, and the compiler did not create a .class file. Carefully verify the program, fix any errors that you detect, and try again.
@@ -82,6 +84,7 @@ System.out.println("Input has " + count + " chars.")
                                                      ^
 1 error
 ```
+
 有时候编译器无法猜到你的想法，提示一个很迷惑的错误信息或者有多处错误信息。例如，下面第二行代码缺少了一个分号：
 
 ```java
@@ -107,6 +110,7 @@ testing.java:14: Invalid declaration.
 
 In addition to verifying that your program is syntactically correct, the compiler checks for other basic correctness. For example, the compiler warns you each time you use a variable that has not been initialized:
 
+```java
 testing.java:13: Variable count may not have been initialized.
         count++
         ^
@@ -114,6 +118,8 @@ testing.java:14: Variable count may not have been initialized.
     System.out.println("Input has " + count + " chars.");
                                        ^
 2 errors
+```
+
 Again, your program did not successfully compile, and the compiler did not create a .class file. Fix the error and try again.
 
 编译器除了验证程序语法的正确性，还检查一些基本的语义是否正确。例如，编译器提示你使用的一个变量没有被初始化：
