@@ -4,14 +4,14 @@
 
 ## 基础教程 
 * [入门](Getting_Started.md)
-	* [Java技术介绍](Getting_Started/1_The_Java_Technology_Phenomenon.md)
-	* [编写"hello world"程序](Getting_Started/2_The_HW_Application.md)
-	* ["hello world"详解](Getting_Started/3_A_Closer_Look_atHW.md)
-	* [常见问题解答](Getting_Started/4_Common_Problems.md)
-	* [问题·练习](Getting_Started/5_Questions_and_Exercises.md)
+	* [1.Java技术介绍](Getting_Started/1_The_Java_Technology_Phenomenon.md)
+	* [2.编写"hello world"程序](Getting_Started/2_The_HW_Application.md)
+	* [3."hello world"详解](Getting_Started/3_A_Closer_Look_atHW.md)
+	* [4.常见问题解答](Getting_Started/4_Common_Problems.md)
+	* [5.问题·练习](Getting_Started/5_Questions_and_Exercises.md)
 * [学习Java语言](Learning_The_Java_Language.md)
-	* [面向对象编程概念](Learning_The_Java_Language/object-oriented_programming_concepts.md)
-	* [基础语法](Learning_The_Java_Language/language_basics.md)
+	* [1.面向对象编程概念](Learning_The_Java_Language/object-oriented_programming_concepts.md)
+	* [2.基础语法](Learning_The_Java_Language/language_basics.md)
 	* 类与对象
 	* 注解
 	* 接口与继承
