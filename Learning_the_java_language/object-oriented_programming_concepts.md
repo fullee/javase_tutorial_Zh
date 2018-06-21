@@ -205,7 +205,7 @@ Implementing an interface allows a class to become more formal about the behavio
 
 包是一个命名空间，它组织一组相关的类和接口。您可以将软件包等同于文件夹。您可以将HTML页面保存在一个文件夹中，另一个文件中包含图像，另一个文件夹中包含脚本或应用程序。因为使用JPL编写的软件可能由数千个类构成, 因此使用包来组织和管理类和接口非常有意义。
 
-Java平台提供了一个强大的类库（包的集合）用于你的应用。这个库就是众所周知的“API（Application Programming Interface）”。Java API提供了通用的编程接口。例如，String对象包含的状态和行为是为了处理字符串，File对象使开发者更容易在文件系统上创建、删除、查看、合并、修改文件。Socket对象允许创建和使用socket;GUI对象控制按钮和复选框以及与图形用户界面相关的其它内容。 有几千个类可供选择。 这使得开发者可以专注于特定应用程序的设计，而不是使其工作所需的基础架构。
+Java平台提供了一个强大的类库（包的集合）。这个库就是众所周知的“API（Application Programming Interface）”。Java API提供了通用的编程接口。例如，String对象包含的状态和行为是为了处理字符串，File对象使开发者更容易在文件系统上创建、删除、查看、合并、修改文件。Socket对象允许创建和使用socket;GUI对象控制按钮和复选框以及与图形用户界面相关的其它内容。 有几千个类可供选择。 这使得开发者可以专注于特定应用程序的设计，而不是使其工作所需的基础架构。
 
 这份[Java API规范](https://docs.oracle.com/javase/8/docs/api/index.html)列出了JavaSE全部的包，接口，类字段以及方法。作为Java开发者，这将是你最常用的文档之一。
 
@@ -213,30 +213,32 @@ Java平台提供了一个强大的类库（包的集合）用于你的应用。�
 
 > 利用这些问题和练习测试你对objects，classes，inheritance，interfaces和包的理解。
 
-Questions
-Real-world objects contain ___ and ___.
-A software object's state is stored in ___.
-A software object's behavior is exposed through ___.
-Hiding internal data from the outside world, and accessing it only through publicly exposed methods is known as data ___.
-A blueprint for a software object is called a ___.
-Common behavior can be defined in a ___ and inherited into a ___ using the ___ keyword.
-A collection of methods with no implementation is called an ___.
-A namespace that organizes classes and interfaces by functionality is called a ___.
-The term API stands for ___?
-Exercises
-Create new classes for each real-world object that you observed at the beginning of this trail. Refer to the Bicycle class if you forget the required syntax.
-For each new class that you've created above, create an interface that defines its behavior, then require your class to implement it. Omit one or two methods and try compiling. What does the error look like?
+### 问题
 
-Answers to Questions
-Real-world objects contain state and behavior.
-A software object's state is stored in fields.
-A software object's behavior is exposed through methods.
-Hiding internal data from the outside world, and accessing it only through publicly exposed methods is known as data encapsulation.
-A blueprint for a software object is called a class.
-Common behavior can be defined in a superclass and inherited into a subclass using the extends keyword.
-A collection of methods with no implementation is called an interface.
-A namespace that organizes classes and interfaces by functionality is called a package.
-The term API stands for Application Programming Interface.
-Answers to Exercises
-Your answers will vary depending on the real-world objects that you are modeling.
-Your answers will vary here as well, but the error message will specifically list the required methods that have not been implemented.
+1. 真实世界中的对象包含**状态**和**行为**。
+
+2. 软件对象的状态存储在**字段**中。
+
+3. 对象的行为通过**方法**暴漏给外界。
+
+4. 隐藏内部数据，数据通过共有方法进行访问叫做数据的**封装**。
+
+5. 软件对象的蓝图被叫做**类（class）**。
+
+6. 公共的方法可以定义在父类中，继承它的子类需要使用`extends`关键字。
+
+7. 没有实现的方法集合称为**接口（interface）**。
+
+8. 按功能组织类和接口的名称空间称为**包（package）**。
+
+9. 术语API表示**Application Programming Interface**。
+
+### 练习
+
+1.在这节开头处观察到的每个真实世界对象创建新类。 如果您忘记了所需的语法，请参阅Bicycle类。
+
+答案：你的回答引来于你观察的对象。
+
+2.在你新创建的类的基础上，创建一个接口来定义它的行为，然后将你的类实现这个接口。省略一两个方法尝试编译。这个报错提示什么信息？
+
+答案：您的答案也会在此处有所不同，但错误消息将特别列出尚未实现的所需方法。
